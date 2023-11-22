@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  # Redis service
+  redis:
+    container_name: redis_container
+    image: redis:latest
+    restart: always
+    volumes:
+      - redis:/data/
+  
+  # Node Api service
+  api:
+    env_file:
+      - doc.env
+    container_name: api_container
+    build: .
+    ports:
+      - 4000:3000
+    depends_on:
+      - redis
+
+volumes:
+  redis: {}

@@ -1,0 +1,103 @@
+### login route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "amanuelgetachew554@gmail.com",
+    "password": "12341234"
+}
+
+###register route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk3ODkyNzUsImV4cCI6MTY5OTc4OTg3NSwiYXVkIjoiYW1hbmdldDgyNEBnbWFpbC5jb20iLCJpc3MiOiJBUktJUkVNSVQuQ09NIn0.d5zQ-lafns5CgA08F36dL2xejolwI2THV0nelYmDkQw
+
+{
+    "first_name": "Amanuel",
+    "middle_name": "Getachew",
+    "last_name": "Gebrewold",
+    "phonenumber": "+251941397022",
+    "password": "12341234"
+}
+
+###enable route
+PUT http://localhost:3000/auth/enable-user-acc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkwMzA5MDksImV4cCI6MTY5OTAzNDUwOSwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.TYs1KSL7-2n2lWNoL5kKkHN3zzwiH8D-obB__jw2olA
+
+{
+    "email": "amanuelgetachew554@gmail.com"
+}
+
+###disable route
+PUT http://localhost:3000/auth/disable-user-acc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkwMzA5MDksImV4cCI6MTY5OTAzNDUwOSwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.TYs1KSL7-2n2lWNoL5kKkHN3zzwiH8D-obB__jw2olA
+
+{
+    "email": "amanuelgetachew554@gmail.com"
+}
+
+###update route
+PUT http://localhost:3000/auth/update-user-info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5MDU5ODMsImV4cCI6MTY5NzkwOTU4MywiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.T1-nIrNPw2J7HMysR_r_EtETTcu_nPEM4G0oHKKJ3_4
+
+{
+    "first_name": "leunama",
+    "middle_name": "Getachew",
+    "last_name": "Gebrewold",
+    "phonenumber": "+251941397022",
+    "email": "amanuelgetachew554@gmail.com"
+}
+
+###change password
+PUT http://localhost:3000/auth/update-user-pass
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5MDU5ODMsImV4cCI6MTY5NzkwOTU4MywiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.T1-nIrNPw2J7HMysR_r_EtETTcu_nPEM4G0oHKKJ3_4
+
+{
+    "oldPassword": "ABcd12@#",
+    "password": "amanuelg"
+}
+
+###data of logged in user
+GET  http://localhost:3000/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5MDY2NjUsImV4cCI6MTY5NzkxMDI2NSwiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.gAriWDdayB5o-OCh_QnvaOg4A9Q_FLphNCmiEZxQK9k
+
+###refresh token route
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5ODY5MDksImV4cCI6MTcyOTU0NDUwOSwiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.0ASBZj5wTkWyjn0cW0CO17jmlJdkU9kalC37C1GvKWk"
+}
+
+###logout route
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5ODY5MDksImV4cCI6MTcyOTU0NDUwOSwiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.0ASBZj5wTkWyjn0cW0CO17jmlJdkU9kalC37C1GvKWk"
+}
+
+
+###refresh token route
+POST http://localhost:3000/auth/send-verification-code
+Content-Type: application/json
+
+{
+  "email": "amanget824@gmail.com",
+  "new": true
+}
+
+
+###verify code
+POST http://localhost:3000/auth/verify-code
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk3ODkxOTIsImV4cCI6MTY5OTc4OTc5MiwiYXVkIjoiYW1hbmdldDgyNEBnbWFpbC5jb20iLCJpc3MiOiJBUktJUkVNSVQuQ09NIn0.FPewTtb7SBcnXewWVSndDnC53gG-_UP62eUCEI-M7Yg
+
+{
+    "code": "141809"
+}
+

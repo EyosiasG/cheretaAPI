@@ -1,0 +1,70 @@
+### login admin route
+POST http://localhost:3000/admin/login
+Content-Type: application/json
+
+{
+    "email": "amanuelgetachew554@gmail.com",
+    "password": "ABcd12@#"
+}
+
+###register route
+POST http://localhost:4000/admin/register
+Content-Type: application/json
+
+{
+    "first_name": "Amanuel",
+    "middle_name": "Getachew",
+    "last_name": "Gebrewold",
+    "phonenumber": "+251941397022",
+    "email": "amanuelgetachew554@gmail.com",
+    "password": "12341234"
+}
+
+###update account route
+PUT http://localhost:3000/admin/update-user-info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5MDU5ODMsImV4cCI6MTY5NzkwOTU4MywiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.T1-nIrNPw2J7HMysR_r_EtETTcu_nPEM4G0oHKKJ3_4
+
+{
+    "first_name": "leunama",
+    "middle_name": "Getachew",
+    "last_name": "Gebrewold",
+    "phonenumber": "+251941397022",
+    "email": "amanuelgetachew554@gmail.com"
+}
+
+###change password route
+PUT http://localhost:3000/admin/update-user-pass
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTc5MDU5ODMsImV4cCI6MTY5NzkwOTU4MywiYXVkIjoiNjUzM2ZkM2Y1ZWExMTVmNTQ3MTcxNzkwIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.T1-nIrNPw2J7HMysR_r_EtETTcu_nPEM4G0oHKKJ3_4
+
+{
+    "oldPassword": "ABcd12@#",
+    "password": "amanuelg"
+}
+
+###get info about logged in user
+GET  http://localhost:3000/admin/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkyNTgxNDQsImV4cCI6MTY5OTI2MTc0NCwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.9fMJhBthAl7QkgEZBWW3Hui0a1QZpSjHQy07OV6cNuk
+
+###get all admins list
+GET  http://localhost:3000/admin/all-admins
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkyNTgxNDQsImV4cCI6MTY5OTI2MTc0NCwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.9fMJhBthAl7QkgEZBWW3Hui0a1QZpSjHQy07OV6cNuk
+
+
+###refresh token route
+POST http://localhost:3000/admin/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkyNTgzMTksImV4cCI6MTczMDgxNTkxOSwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.UoTTUcg3qJGbvjQzYpXZGxYueizGueEr-dS1Z9ADRos"
+}
+
+###logout route
+DELETE http://localhost:3000/admin/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTkyNTgzMjksImV4cCI6MTczMDgxNTkyOSwiYXVkIjoiNjU0NTIzMGIwMzFhOTE2ZDhkMjM2ZTlkIiwiaXNzIjoiQVJLSVJFTUlULkNPTSJ9.4BiL4Vc-KlJEoUQbfvZ7yonU0_agDh9UHyB9psUbc8g"
+}
+
